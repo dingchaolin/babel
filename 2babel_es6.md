@@ -202,7 +202,7 @@ class DemoComponent extends Component{
 handleClick(){
    console.log( "====" );
 }
-        return <button onClick={this.handleClick.bind(this) }>Hello World!</button>
+        return <标签 onClick={this.handleClick.bind(this) }>Hello World!</标签>
     }
 }
 
@@ -212,9 +212,10 @@ class DemoComponent extends Component{
 handleClick=()=>{
    console.log( "====" );
 }
-        return <button onClick={this.handleClick }>Hello World!</button> 
+        return <标签 onClick={this.handleClick }>Hello World!</标签>
     }
 }
+注意：标签可以是 button  h1 等等 都可以 这里只是为了上传之后 不别识别 以便能看到代码
 
 #3 class super extends 类的支持
 3.1类中定义的方法实际就是定义在prototype上面的
