@@ -136,6 +136,10 @@ npm install --save babel-runtime -g
 npm install babel-runtime babel-plugin-transform-runtime --save-dev
 npm install babel-runtime babel-plugin-transform-runtime -g
 
+#注意
+preset要写到preset的配置项里
+plugins 要写到plugins的配置项里
+
 添加plugins的配置
 {
 "presets":["es2015","react"],
@@ -150,4 +154,31 @@ npm install babel-polyfill -g
 添加代码：
 import 'babel-polyfill';
 
-35:42
+#ES7语法
+npm install babel-preset-stage-0 --save-dev
+npm install babel-preset-state-0 -g
+添加配置：
+{
+"presets":["es2015","react","stage-0"],
+"plugins": ["transform-runtime"]
+}
+
+##gulp+babel
+gulp可以解析一些css等静态资源
+ES6和JSX语法使用babel解析
+
+#安装gulp
+npm install gulp gulp-babel --save-dev
+npm install gulp gulp-babel -g
+创建相关的配置文件：
+1. gulpfile.js
+2. package.json中添加配置
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src -wd build",
+    "dev":"./node_modules/.bin/gulp"
+  },
+
+
+
+
