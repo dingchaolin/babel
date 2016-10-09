@@ -202,7 +202,7 @@ class DemoComponent extends Component{
 handleClick(){
    console.log( "====" );
 }
-        return "<h1 onClick={this.handleClick.bind(this) }>Hello World!</h1>"
+        return <button onClick={this.handleClick.bind(this) }>Hello World!</button>
     }
 }
 
@@ -212,7 +212,7 @@ class DemoComponent extends Component{
 handleClick=()=>{
    console.log( "====" );
 }
-        return "<h1 onClick={this.handleClick }>Hello World!</h1> "
+        return <button onClick={this.handleClick }>Hello World!</button> 
     }
 }
 
