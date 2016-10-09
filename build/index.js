@@ -1,17 +1,24 @@
 'use strict';
 
-var _from = require('babel-runtime/core-js/array/from');
-
-var _from2 = _interopRequireDefault(_from);
-
-require('babel-polyfill');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log((0, _from2.default)('abcd'));
-var sum = function sum(a, b) {
-  return a + b;
+//import 'babel-polyfill';
+//console.log( Array.from('abcd') );
+//const sum=(a,b)=>a+b;
+//let x = sum(1,2);
+//let y = sum(2,3);
+//console.log( x );
+//通过对象字面量创建对象
+var human = {
+    breathe: function breathe() {
+        console.log('breathing...');
+    }
 };
-var x = sum(1, 2);
-var y = sum(2, 3);
-console.log(x);
+var worker = {
+    __proto__: human, //设置此对象的原型为human,相当于继承human
+    company: 'freelancer',
+    work: function work() {
+        console.log('working...');
+    }
+};
+human.breathe(); //输出 ‘breathing...’
+//调用继承来的breathe方法
+worker.breathe(); //输出 ‘breathing...’
