@@ -156,7 +156,7 @@ import 'babel-polyfill';
 
 #ES7语法
 npm install babel-preset-stage-0 --save-dev
-npm install babel-preset-state-0 -g
+npm install babel-preset-stage-0 -g
 添加配置：
 {
 "presets":["es2015","react","stage-0"],
